@@ -140,7 +140,7 @@ if(isset($_POST['transfer']))
 
         // adding amount to reciever's account
         $newbalance = $sql2['Amount'] + $amount;
-        $sql = "UPDATE users set Amount=$newbalance where UserId=$to";
+        $sql = "UPDATE user set Amount=$newbalance where UserId=$to";
         mysqli_query($link,$sql);
 
         $sender = $sql1['Username'];
